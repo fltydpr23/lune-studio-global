@@ -1,0 +1,879 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lune Studio — Services & Pricing 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Mono:wght@300;400&family=Outfit:wght@200;300;400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0b0a09;
+    --bg2: #111009;
+    --cream: #ede8df;
+    --cream-dim: #a09890;
+    --gold: #b5895a;
+    --gold-dim: #7a5c38;
+    --rule: rgba(181,137,90,0.2);
+    --rule-light: rgba(237,232,223,0.08);
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html {
+    background: var(--bg);
+    color: var(--cream);
+    font-family: 'Outfit', sans-serif;
+    font-weight: 300;
+    font-size: 15px;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* Grain overlay */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='1'/%3E%3C/svg%3E");
+    opacity: 0.035;
+    pointer-events: none;
+    z-index: 1000;
+  }
+
+  .page {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 0 48px;
+  }
+
+  /* ── COVER ── */
+  .cover {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 72px 0 64px;
+    border-bottom: 1px solid var(--rule);
+    position: relative;
+  }
+
+  .cover-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .wordmark {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 300;
+    font-size: 15px;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    color: var(--gold);
+  }
+
+  .cover-meta {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    font-weight: 300;
+    letter-spacing: 0.1em;
+    color: var(--cream-dim);
+    text-align: right;
+    line-height: 1.9;
+  }
+
+  .cover-hero {
+    padding: 120px 0 0;
+  }
+
+  .cover-eyebrow {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.4em;
+    text-transform: uppercase;
+    color: var(--gold-dim);
+    margin-bottom: 40px;
+  }
+
+  .cover-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 300;
+    font-size: clamp(52px, 8vw, 88px);
+    line-height: 1.0;
+    letter-spacing: -0.01em;
+    color: var(--cream);
+    max-width: 640px;
+  }
+
+  .cover-title em {
+    font-style: italic;
+    color: var(--gold);
+  }
+
+  .cover-body {
+    margin-top: 52px;
+    max-width: 440px;
+    line-height: 1.75;
+    color: var(--cream-dim);
+    font-size: 14px;
+    font-weight: 300;
+  }
+
+  .cover-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding-top: 80px;
+  }
+
+  .cover-contact {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.08em;
+    color: var(--cream-dim);
+    line-height: 2;
+  }
+
+  .cover-contact a { color: var(--gold); text-decoration: none; }
+
+  .cover-confidential {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--gold-dim);
+    opacity: 0.6;
+  }
+
+  /* ── GOLD RULE DIVIDER ── */
+  .section-divider {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 80px 0 60px;
+  }
+
+  .section-divider .label {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.4em;
+    text-transform: uppercase;
+    color: var(--gold);
+    white-space: nowrap;
+  }
+
+  .section-divider .line {
+    flex: 1;
+    height: 1px;
+    background: var(--rule);
+  }
+
+  .section-divider .num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 11px;
+    color: var(--gold-dim);
+    letter-spacing: 0.1em;
+  }
+
+  /* ── INTRO PARA ── */
+  .intro {
+    padding-bottom: 72px;
+    border-bottom: 1px solid var(--rule-light);
+  }
+
+  .intro p {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 1.65;
+    color: var(--cream);
+    max-width: 680px;
+  }
+
+  .intro p em {
+    font-style: italic;
+    color: var(--gold);
+  }
+
+  /* ── SERVICE ROWS ── */
+  .services {
+    padding-bottom: 40px;
+  }
+
+  .service-row {
+    display: grid;
+    grid-template-columns: 80px 1fr 180px;
+    gap: 0 40px;
+    padding: 52px 0;
+    border-bottom: 1px solid var(--rule-light);
+    align-items: start;
+    opacity: 0;
+    transform: translateY(16px);
+    animation: fadeUp 0.6s ease forwards;
+  }
+
+  .service-row:nth-child(1) { animation-delay: 0.05s; }
+  .service-row:nth-child(2) { animation-delay: 0.12s; }
+  .service-row:nth-child(3) { animation-delay: 0.19s; }
+  .service-row:nth-child(4) { animation-delay: 0.26s; }
+
+  @keyframes fadeUp {
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .service-index {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 48px;
+    font-weight: 300;
+    line-height: 1;
+    color: var(--gold-dim);
+    opacity: 0.5;
+    padding-top: 4px;
+  }
+
+  .service-body {}
+
+  .service-category {
+    font-family: 'DM Mono', monospace;
+    font-size: 8.5px;
+    letter-spacing: 0.38em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 14px;
+  }
+
+  .service-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 1.15;
+    color: var(--cream);
+    margin-bottom: 20px;
+  }
+
+  .service-features {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .service-features li {
+    font-size: 13px;
+    font-weight: 300;
+    color: var(--cream-dim);
+    line-height: 1.5;
+    padding-left: 16px;
+    position: relative;
+  }
+
+  .service-features li::before {
+    content: '—';
+    position: absolute;
+    left: 0;
+    color: var(--gold-dim);
+    font-size: 11px;
+  }
+
+  .service-pricing {
+    text-align: right;
+    padding-top: 6px;
+  }
+
+  .service-price {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 400;
+    font-size: 28px;
+    color: var(--gold);
+    line-height: 1.1;
+    letter-spacing: -0.01em;
+  }
+
+  .service-price-note {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.1em;
+    color: var(--cream-dim);
+    margin-top: 8px;
+    line-height: 1.8;
+  }
+
+  /* ── ADD-ONS ── */
+  .addons-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: var(--rule-light);
+    border: 1px solid var(--rule-light);
+    margin-bottom: 80px;
+  }
+
+  .addon-cell {
+    background: var(--bg);
+    padding: 28px 24px;
+  }
+
+  .addon-name {
+    font-size: 13px;
+    font-weight: 300;
+    color: var(--cream);
+    margin-bottom: 10px;
+    line-height: 1.4;
+  }
+
+  .addon-price {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px;
+    color: var(--gold);
+  }
+
+  .addon-note {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    color: var(--cream-dim);
+    letter-spacing: 0.06em;
+    margin-top: 4px;
+  }
+
+  /* ── RETAINER ── */
+  .retainer-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-bottom: 80px;
+  }
+
+  .retainer-card {
+    border: 1px solid var(--rule-light);
+    padding: 36px 28px;
+    position: relative;
+    transition: border-color 0.3s ease;
+  }
+
+  .retainer-card:hover {
+    border-color: var(--gold-dim);
+  }
+
+  .retainer-card.featured {
+    border-color: var(--gold-dim);
+    background: rgba(181,137,90,0.04);
+  }
+
+  .retainer-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 8.5px;
+    letter-spacing: 0.38em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 20px;
+  }
+
+  .retainer-price {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 34px;
+    font-weight: 300;
+    color: var(--cream);
+    line-height: 1;
+    margin-bottom: 4px;
+  }
+
+  .retainer-cadence {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    color: var(--cream-dim);
+    letter-spacing: 0.1em;
+    margin-bottom: 28px;
+  }
+
+  .retainer-rule {
+    height: 1px;
+    background: var(--rule-light);
+    margin-bottom: 24px;
+  }
+
+  .retainer-features {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .retainer-features li {
+    font-size: 12.5px;
+    font-weight: 300;
+    color: var(--cream-dim);
+    padding-left: 14px;
+    position: relative;
+    line-height: 1.45;
+  }
+
+  .retainer-features li::before {
+    content: '·';
+    position: absolute;
+    left: 0;
+    color: var(--gold);
+  }
+
+  /* ── PROCESS ── */
+  .process {
+    padding: 20px 0 80px;
+  }
+
+  .process-steps {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+  }
+
+  .process-step {
+    padding: 44px 0;
+    border-bottom: 1px solid var(--rule-light);
+    display: grid;
+    grid-template-columns: 48px 1fr;
+    gap: 20px;
+    align-items: start;
+  }
+
+  .process-step:nth-child(odd) { padding-right: 40px; border-right: 1px solid var(--rule-light); }
+  .process-step:nth-child(even) { padding-left: 40px; }
+  .process-step:nth-last-child(-n+2) { border-bottom: none; }
+
+  .step-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 36px;
+    font-weight: 300;
+    color: var(--gold-dim);
+    opacity: 0.4;
+    line-height: 1;
+  }
+
+  .step-body {}
+
+  .step-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 19px;
+    font-weight: 400;
+    color: var(--cream);
+    margin-bottom: 10px;
+  }
+
+  .step-desc {
+    font-size: 13px;
+    font-weight: 300;
+    color: var(--cream-dim);
+    line-height: 1.65;
+  }
+
+  /* ── TERMS STRIP ── */
+  .terms {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: var(--rule-light);
+    border-top: 1px solid var(--rule-light);
+    border-bottom: 1px solid var(--rule-light);
+    margin-bottom: 80px;
+  }
+
+  .term-cell {
+    background: var(--bg);
+    padding: 32px 28px;
+  }
+
+  .term-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 8.5px;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 12px;
+  }
+
+  .term-body {
+    font-size: 13px;
+    font-weight: 300;
+    color: var(--cream-dim);
+    line-height: 1.7;
+  }
+
+  /* ── CTA ── */
+  .cta {
+    padding: 100px 0 120px;
+    text-align: center;
+    border-top: 1px solid var(--rule);
+  }
+
+  .cta-eyebrow {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.4em;
+    text-transform: uppercase;
+    color: var(--gold-dim);
+    margin-bottom: 32px;
+  }
+
+  .cta-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 300;
+    font-size: clamp(40px, 6vw, 66px);
+    line-height: 1.05;
+    color: var(--cream);
+    margin-bottom: 48px;
+  }
+
+  .cta-title em {
+    font-style: italic;
+    color: var(--gold);
+  }
+
+  .cta-link {
+    display: inline-block;
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--gold);
+    text-decoration: none;
+    border-bottom: 1px solid var(--gold-dim);
+    padding-bottom: 4px;
+    transition: color 0.2s, border-color 0.2s;
+  }
+
+  .cta-link:hover {
+    color: var(--cream);
+    border-color: var(--cream);
+  }
+
+  /* ── FOOTER ── */
+  .footer {
+    padding: 32px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid var(--rule-light);
+  }
+
+  .footer-left {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.2em;
+    color: var(--cream-dim);
+    line-height: 1.9;
+  }
+
+  .footer-left a { color: var(--gold); text-decoration: none; }
+
+  .footer-right {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.15em;
+    color: var(--gold-dim);
+    opacity: 0.5;
+  }
+
+  @media print {
+    body::before { display: none; }
+    .service-row { opacity: 1 !important; transform: none !important; }
+  }
+</style>
+</head>
+<body>
+
+<div class="page">
+
+  <!-- COVER -->
+  <div class="cover">
+    <div class="cover-top">
+      <div class="wordmark">Lune Studio</div>
+      <div class="cover-meta">
+        Services & Pricing<br>
+        2026 Edition<br>
+        Confidential
+      </div>
+    </div>
+
+    <div class="cover-hero">
+      <div class="cover-eyebrow">Design & Engineering Studio</div>
+      <h1 class="cover-title">
+        Design &amp; engineering<br>
+        for brands that want<br>
+        to be <em>remembered.</em>
+      </h1>
+      <p class="cover-body">
+        A boutique creative studio working at the intersection of brand design and frontend engineering. Premium websites, brand identities, and digital experiences — no templates, no handoffs, no middle management. You work directly with the person building your product.
+      </p>
+    </div>
+
+    <div class="cover-bottom">
+      <div class="cover-contact">
+        <a href="mailto:hello@lunestudio.in">hello@lunestudio.in</a><br>
+        lunestudio.in<br>
+        Delhi / Remote · Global clients welcome
+      </div>
+      <div class="cover-confidential">Prepared for client review</div>
+    </div>
+  </div>
+
+  <!-- CORE SERVICES -->
+  <div class="section-divider">
+    <span class="label">Core Services</span>
+    <span class="line"></span>
+    <span class="num">01</span>
+  </div>
+
+  <div class="intro">
+    <p>
+      All engagements are scoped individually. Pick <em>exactly</em> what you need — nothing you don't. Every project is handled personally, start to finish.
+    </p>
+  </div>
+
+  <div class="services">
+
+    <div class="service-row">
+      <div class="service-index">01</div>
+      <div class="service-body">
+        <div class="service-category">Web</div>
+        <div class="service-title">Brand Website<br>Design & Development</div>
+        <ul class="service-features">
+          <li>Custom UI design — no templates, ever</li>
+          <li>Next.js / React development, Vercel deployment</li>
+          <li>GSAP / Framer Motion scroll animations</li>
+          <li>Mobile-responsive, performance-optimised</li>
+          <li>Contact form, CMS integration if needed</li>
+          <li>2 rounds of revisions included</li>
+        </ul>
+      </div>
+      <div class="service-pricing">
+        <div class="service-price">₹1.5L – 4L</div>
+        <div class="service-price-note">Fixed project price<br>based on scope</div>
+      </div>
+    </div>
+
+    <div class="service-row">
+      <div class="service-index">02</div>
+      <div class="service-body">
+        <div class="service-category">Web</div>
+        <div class="service-title">Landing Page /<br>Campaign Page</div>
+        <ul class="service-features">
+          <li>Single-page, conversion-focused design</li>
+          <li>Custom animations and hero section</li>
+          <li>Optimised for speed and SEO</li>
+          <li>Delivered in 7–10 working days</li>
+        </ul>
+      </div>
+      <div class="service-pricing">
+        <div class="service-price">₹60K – 1.2L</div>
+        <div class="service-price-note">Fixed price</div>
+      </div>
+    </div>
+
+    <div class="service-row">
+      <div class="service-index">03</div>
+      <div class="service-body">
+        <div class="service-category">Brand</div>
+        <div class="service-title">Brand Identity</div>
+        <ul class="service-features">
+          <li>Logo design — 3 concepts, 2 revision rounds</li>
+          <li>Colour palette, typography system</li>
+          <li>Brand guidelines document</li>
+          <li>Logo files in all formats (SVG, PNG, PDF)</li>
+          <li>Optional: business cards, letterhead, social kit</li>
+        </ul>
+      </div>
+      <div class="service-pricing">
+        <div class="service-price">₹50K – 1.5L</div>
+        <div class="service-price-note">Depends on depth<br>of scope</div>
+      </div>
+    </div>
+
+    <div class="service-row">
+      <div class="service-index">04</div>
+      <div class="service-body">
+        <div class="service-category">UI / UX</div>
+        <div class="service-title">UI/UX Design<br>in Figma</div>
+        <ul class="service-features">
+          <li>Wireframes + high-fidelity Figma designs</li>
+          <li>Design system / component library</li>
+          <li>Interactive prototype for stakeholder review</li>
+          <li>Developer-ready handoff with specs</li>
+          <li>Ideal for apps, SaaS dashboards, product screens</li>
+        </ul>
+      </div>
+      <div class="service-pricing">
+        <div class="service-price">₹75K – 2.5L</div>
+        <div class="service-price-note">Per project /<br>screen count</div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ADD-ONS -->
+  <div class="section-divider">
+    <span class="label">Add-ons</span>
+    <span class="line"></span>
+    <span class="num">02</span>
+  </div>
+
+  <div class="addons-grid">
+    <div class="addon-cell">
+      <div class="addon-name">Extra Revision Round</div>
+      <div class="addon-price">₹8,000</div>
+      <div class="addon-note">Per additional round</div>
+    </div>
+    <div class="addon-cell">
+      <div class="addon-name">Rush Delivery</div>
+      <div class="addon-price">+30%</div>
+      <div class="addon-note">Delivery under 5 days</div>
+    </div>
+    <div class="addon-cell">
+      <div class="addon-name">Social Media Kit</div>
+      <div class="addon-price">₹20,000</div>
+      <div class="addon-note">10 templates, 2 formats</div>
+    </div>
+    <div class="addon-cell">
+      <div class="addon-name">Copywriting</div>
+      <div class="addon-price">₹4,000</div>
+      <div class="addon-note">Per page</div>
+    </div>
+    <div class="addon-cell">
+      <div class="addon-name">Domain + Hosting Setup</div>
+      <div class="addon-price">₹6,000</div>
+      <div class="addon-note">One-time configuration</div>
+    </div>
+    <div class="addon-cell">
+      <div class="addon-name">SEO Foundation</div>
+      <div class="addon-price">₹15,000</div>
+      <div class="addon-note">Meta, schema, sitemap, speed</div>
+    </div>
+  </div>
+
+  <!-- RETAINER -->
+  <div class="section-divider">
+    <span class="label">Monthly Retainer</span>
+    <span class="line"></span>
+    <span class="num">03</span>
+  </div>
+
+  <div class="retainer-grid">
+    <div class="retainer-card">
+      <div class="retainer-label">Maintain</div>
+      <div class="retainer-price">₹12,000</div>
+      <div class="retainer-cadence">/ month</div>
+      <div class="retainer-rule"></div>
+      <ul class="retainer-features">
+        <li>Security & plugin updates</li>
+        <li>Up to 3 content changes</li>
+        <li>48h response time</li>
+        <li>Monthly performance report</li>
+      </ul>
+    </div>
+    <div class="retainer-card featured">
+      <div class="retainer-label">Studio Partner</div>
+      <div class="retainer-price">₹30,000</div>
+      <div class="retainer-cadence">/ month</div>
+      <div class="retainer-rule"></div>
+      <ul class="retainer-features">
+        <li>10 hrs design or dev work</li>
+        <li>Priority turnaround</li>
+        <li>New features & iterations</li>
+        <li>Dedicated Slack channel</li>
+        <li>Monthly strategy call</li>
+      </ul>
+    </div>
+    <div class="retainer-card">
+      <div class="retainer-label">Growth</div>
+      <div class="retainer-price">₹55,000</div>
+      <div class="retainer-cadence">/ month</div>
+      <div class="retainer-rule"></div>
+      <ul class="retainer-features">
+        <li>20 hrs design or dev work</li>
+        <li>Same-day response</li>
+        <li>A/B testing & CRO</li>
+        <li>Brand asset management</li>
+        <li>Quarterly brand review</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- PROCESS -->
+  <div class="section-divider">
+    <span class="label">How It Works</span>
+    <span class="line"></span>
+    <span class="num">04</span>
+  </div>
+
+  <div class="process">
+    <div class="process-steps">
+      <div class="process-step">
+        <div class="step-num">01</div>
+        <div class="step-body">
+          <div class="step-title">Discovery Call</div>
+          <div class="step-desc">We align on goals, scope, timeline, and what success looks like. No guesswork, no assumptions.</div>
+        </div>
+      </div>
+      <div class="process-step">
+        <div class="step-num">02</div>
+        <div class="step-body">
+          <div class="step-title">Proposal & Deposit</div>
+          <div class="step-desc">Detailed scope sent within 48 hours. 40% upfront to begin. Clear deliverables from day one.</div>
+        </div>
+      </div>
+      <div class="process-step">
+        <div class="step-num">03</div>
+        <div class="step-body">
+          <div class="step-title">Design & Build</div>
+          <div class="step-desc">You review at key milestones. Feedback loops are structured — no surprises at the end.</div>
+        </div>
+      </div>
+      <div class="process-step">
+        <div class="step-num">04</div>
+        <div class="step-body">
+          <div class="step-title">Launch & Handoff</div>
+          <div class="step-desc">Final balance on launch. Full source files and access transferred. You own everything.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TERMS -->
+  <div class="section-divider">
+    <span class="label">Terms</span>
+    <span class="line"></span>
+    <span class="num">05</span>
+  </div>
+
+  <div class="terms">
+    <div class="term-cell">
+      <div class="term-label">Payment</div>
+      <div class="term-body">40% on project start · 30% on design approval · 30% on launch. Bank transfer or UPI accepted.</div>
+    </div>
+    <div class="term-cell">
+      <div class="term-label">Revisions</div>
+      <div class="term-body">2 rounds included in all web and brand projects. Additional rounds billed at ₹8,000 each.</div>
+    </div>
+    <div class="term-cell">
+      <div class="term-label">Ownership</div>
+      <div class="term-body">Full IP and source files transfer to client on final payment. No ongoing licensing fees.</div>
+    </div>
+  </div>
+
+  <!-- CTA -->
+  <div class="cta">
+    <div class="cta-eyebrow">Let's Talk</div>
+    <div class="cta-title">Ready to build something<br>worth <em>remembering?</em></div>
+    <a class="cta-link" href="mailto:hello@lunestudio.in">hello@lunestudio.in</a>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <div class="footer-left">
+      <a href="https://lunestudio.in">lunestudio.in</a> &nbsp;·&nbsp; <a href="mailto:hello@lunestudio.in">hello@lunestudio.in</a><br>
+      Delhi / Remote &nbsp;·&nbsp; Available for global clients
+    </div>
+    <div class="footer-right">© 2026 Lune Studio</div>
+  </div>
+
+</div>
+</body>
+</html>

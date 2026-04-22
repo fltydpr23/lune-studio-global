@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Message Received | Lune Studio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Syne:wght@800&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        :root {
+            --primary: #A78BFA;
+            --bg: #050508;
+        }
+        body {
+            background-color: var(--bg);
+            color: #fff;
+            font-family: 'Inter', sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+            overflow: hidden;
+        }
+        .syne { font-family: 'Syne', sans-serif; }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 32px;
+            padding: 4rem;
+            text-align: center;
+            max-width: 500px;
+            width: 90%;
+            position: relative;
+        }
+        .success-icon {
+            width: 80px;
+            height: 80px;
+            background: rgba(167, 139, 250, 0.1);
+            border: 1px solid rgba(167, 139, 250, 0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 2rem;
+            color: var(--primary);
+            font-size: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="glass-card">
+        <div class="success-icon">✓</div>
+        <h1 class="syne text-4xl font-extrabold mb-4 uppercase tracking-tighter italic">Message Received.</h1>
+        <p class="text-slate-400 text-lg mb-8 leading-relaxed">
+            Your inquiry has been routed to Adhityan. You can expect a strategy-led response within 2 hours.
+        </p>
+        <a href="lune-studio-global.html" class="inline-block px-8 py-4 bg-violet-500 text-black font-bold rounded-full hover:bg-violet-400 transition-all uppercase tracking-widest text-sm">
+            Back to Home
+        </a>
+    </div>
+
+    <!-- Background glow -->
+    <div class="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-violet-500/10 blur-[120px] rounded-full -z-10"></div>
+</body>
+</html>

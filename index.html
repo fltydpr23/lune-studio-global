@@ -1647,8 +1647,12 @@
                     A boutique design and engineering studio. We architect premium digital systems for service businesses that demand exceptional positioning.
                 </h2>
 
-                <div class="cta-button-primary flex flex-col md:flex-row gap-4">
+                <div class="cta-button-primary flex flex-col md:flex-row items-center gap-6">
                     <button class="btn-premium btn-primary" onclick="openBooking()">Schedule Strategy Call →</button>
+                    <span class="text-sm font-semibold tracking-widest text-violet-400 uppercase flex items-center gap-2">
+                        <span class="w-2 h-2 rounded-full bg-violet-400 animate-pulse"></span>
+                        2 slots open for Q2 2025
+                    </span>
                 </div>
             </div>
         </div>
@@ -1773,7 +1777,7 @@
 
                 <div class="scroll-reveal glass-card stat-box">
                     <div class="stat-value">
-                        <span class="counter" data-target="7">0</span>
+                        <span class="counter" data-target="14">0</span>
                     </div>
                     <div class="stat-label">Days avg. time to launch</div>
                 </div>
@@ -1878,32 +1882,32 @@
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- Demo 1 — Empire Builders UK -->
+                <!-- Demo 1 — Notice App -->
                 <div class="scroll-reveal grid-item glass-card demo-card overflow-hidden p-0">
                     <div class="site-preview-wrapper" style="height:220px;">
                         <div class="site-preview-bar">
                             <div class="site-preview-dot" style="background:#ff5f56"></div>
                             <div class="site-preview-dot" style="background:#ffbd2e"></div>
                             <div class="site-preview-dot" style="background:#27c93f"></div>
-                            <span class="site-preview-url">empire-builders-uk.vercel.app</span>
+                            <span class="site-preview-url">notice-v1.vercel.app</span>
                         </div>
                         <div class="site-preview-iframe-wrap">
-                            <iframe src="https://empire-builders-uk.vercel.app" loading="lazy" scrolling="no"
-                                title="Empire Builders UK"></iframe>
+                            <iframe src="https://notice-v1.vercel.app" loading="lazy" scrolling="no"
+                                title="Notice App"></iframe>
                         </div>
                         <div class="site-preview-click-overlay"
-                            onclick="window.open('https://empire-builders-uk.vercel.app', '_blank')"></div>
+                            onclick="window.open('https://notice-v1.vercel.app', '_blank')"></div>
                     </div>
                     <div class="p-6">
                         <div class="flex items-center gap-2 mb-1">
-                            <h3 class="font-bold text-lg">Empire Builders</h3>
+                            <h3 class="font-bold text-lg">Notice App</h3>
                             <span
-                                class="text-xs bg-violet-500/20 text-violet-300 border border-violet-500/30 px-2 py-0.5 rounded-full font-semibold uppercase tracking-tighter">UK</span>
+                                class="text-xs bg-violet-500/20 text-violet-300 border border-violet-500/30 px-2 py-0.5 rounded-full font-semibold uppercase tracking-tighter">SaaS</span>
                         </div>
-                        <p class="text-slate-400 text-sm mb-1">Construction & Contractors · UK</p>
-                        <p class="text-slate-500 text-xs mb-4">Architectural infrastructure · <strong>High-intent conversion uplift</strong></p>
+                        <p class="text-slate-400 text-sm mb-1">Interactive Notification Management · Product Design</p>
+                        <p class="text-slate-500 text-xs mb-4">Product-led UX engineering · <strong>Interactive Interface Design</strong></p>
                         <button class="btn-premium btn-secondary w-full text-center text-sm"
-                            onclick="window.open('https://empire-builders-uk.vercel.app', '_blank')">View Live Site
+                            onclick="window.open('https://notice-v1.vercel.app', '_blank')">View Live Site
                             →</button>
                     </div>
                 </div>
@@ -2221,10 +2225,16 @@
                             How we helped a Bristol-based construction firm break through the trust barrier of the UK
                             market using validation loops and mikro-intentionality.
                         </p>
-                        <a href="case-studies/empire-builders-uk.html"
-                            class="inline-flex items-center gap-2 text-violet-400 font-bold text-sm hover:gap-4 transition-all">
-                            Read 10-Minute Narrative <span class="text-lg">→</span>
-                        </a>
+                        <div class="flex flex-col gap-4">
+                            <a href="case-studies/empire-builders-uk.html"
+                                class="inline-flex items-center gap-2 text-violet-400 font-bold text-sm hover:gap-4 transition-all">
+                                Read 10-Minute Narrative <span class="text-lg">→</span>
+                            </a>
+                            <a href="https://empire-builders-uk.vercel.app" target="_blank"
+                                class="text-[10px] text-slate-500 uppercase tracking-widest hover:text-white transition-colors">
+                                View Live Site ↗
+                            </a>
+                        </div>
                     </div>
                 </div>
 
@@ -2244,10 +2254,16 @@
                             A deep dive into plug-and-play revenue leaks we found in a premium dermatology clinic and
                             the intervention that scaled them to ₹6L/mo.
                         </p>
-                        <a href="case-studies/gayathri-skin-clinic.html"
-                            class="inline-flex items-center gap-2 text-violet-400 font-bold text-sm hover:gap-4 transition-all">
-                            Read 10-Minute Narrative <span class="text-lg">→</span>
-                        </a>
+                        <div class="flex flex-col gap-4">
+                            <a href="case-studies/gayathri-skin-clinic.html"
+                                class="inline-flex items-center gap-2 text-violet-400 font-bold text-sm hover:gap-4 transition-all">
+                                Read 10-Minute Narrative <span class="text-lg">→</span>
+                            </a>
+                            <a href="https://gayathri-skin.vercel.app" target="_blank"
+                                class="text-[10px] text-slate-500 uppercase tracking-widest hover:text-white transition-colors">
+                                View Live Site ↗
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -2439,12 +2455,12 @@
                 </a>
 
                 <!-- Article 3 -->
-                <a href="blog/seven-day-launch.html"
+                <a href="blog/fourteen-day-launch.html"
                     class="glass-card p-6 block hover:-translate-y-2 transition-all duration-300 group border-white/5 hover:border-violet-500/30">
                     <span
                         class="text-[10px] font-bold text-violet-400 uppercase tracking-widest mb-4 block">Process</span>
                     <h4 class="text-white font-bold text-lg mb-4 group-hover:text-violet-300 transition-colors">The
-                        7-Day Launch: Speed as a Competitive Edge.</h4>
+                        14-Day Launch: Speed as a Competitive Edge.</h4>
                     <p class="text-slate-500 text-xs leading-relaxed mb-6">Our internal framework for shipping
                         high-performance systems in record time.</p>
                     <span
@@ -2655,13 +2671,10 @@
 
             <div id="pricing-header" class="mb-16 flex flex-col md:flex-row md:items-end justify-between gap-8">
                 <div>
-                    <span class="section-eyebrow">Pricing</span>
-                    <h2 class="text-4xl md:text-5xl font-bold">Simple, transparent pricing</h2>
-                    <p class="text-slate-400 text-lg mt-4">All plans include unlimited revisions, 30 days of free
-                        support, and deployment.</p>
+                    <span class="section-eyebrow">Investment</span>
+                    <h2 class="text-4xl md:text-5xl font-bold">Structured around scope.</h2>
+                    <p class="text-slate-400 text-lg mt-4 max-w-xl">Each engagement is scoped precisely to your brief — no padding, no surprises. Prices are indicative; every project is confirmed through a direct conversation.</p>
                 </div>
-
-                <!-- Currency Toggle Removed for Clean Alignment with Scoping Guide -->
             </div>
 
             <div class="grid md:grid-cols-3 gap-8">
@@ -2702,9 +2715,7 @@
                 <!-- Tier 2: Brand System & Development -->
                 <div class="scroll-reveal glass-card pricing-card p-8 border-violet-500/30 ring-1 ring-violet-500/20 relative flex flex-col h-full group scale-y-105"
                     style="background:rgba(167,139,250,0.05);">
-                    <div
-                        class="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-violet-600 text-white text-[10px] font-bold uppercase tracking-widest shadow-lg shadow-violet-900/20">
-                        Most Requested</div>
+                    <div class="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-violet-600 text-white text-[10px] font-bold uppercase tracking-widest shadow-lg shadow-violet-900/20">Primary Engagement</div>
 
                     <h3 class="text-xl font-bold mb-2">Brand System & Dev</h3>
                     <p class="text-slate-400 text-sm mb-6">Complete architectural overhaul for scaling brands.</p>
@@ -2783,13 +2794,13 @@
                 </div>
             </div>
 
-            <div
-                class="mt-12 p-8 text-center rounded-lg bg-gradient-to-r from-green-500/10 to-violet-500/10 border border-green-500/20">
-                <p class="text-slate-300 mb-4">
-                    <strong>Not sure which plan is right for you?</strong>
-                </p>
-                <p class="text-slate-400 text-sm mb-6">
-                    Chat <!-- FAQ Section -->
+            <div class="mt-12 p-8 rounded-lg border border-white/5 flex flex-col md:flex-row items-center justify-between gap-6">
+                <div>
+                    <p class="font-semibold text-slate-200">Every project begins with a conversation.</p>
+                    <p class="text-slate-500 text-sm mt-1">Scope, timeline, and investment are confirmed directly — before any commitment is made.</p>
+                </div>
+                <button class="btn-premium btn-secondary whitespace-nowrap" onclick="window.open('https://wa.me/919597893308?text=Hi%20Lune%20Studio%2C%20I%27d%20like%20to%20discuss%20a%20project.', '_blank')">Start a Conversation →</button>
+            </div> <!-- FAQ Section -->
                 <section class="py-24">
                     <div class="section-container">
                         <div class="mb-16">
